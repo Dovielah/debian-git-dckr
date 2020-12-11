@@ -2,9 +2,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Java Test Docker</title>
+<link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-2/css/bootstrap.min.css" />
 </head>
 <body>
-<label th:text=${newform.name}></label>
+	<form th:action="@{/hello/${name}}" th:object="${form}" method="GET">
+	<div class=group-form>
+		<h1><span th:text="*{response}" class="badge badge-secondary" style="font-family: Helvetica"></span></h1>
+		</div>
+	</form>
+
+	<script type="text/javascript" src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
 </body>
 </html>
